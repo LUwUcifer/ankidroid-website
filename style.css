@@ -73,44 +73,43 @@ main .download-container {
   flex-wrap: wrap;
 }
 
-main .point:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-
 .content {
   max-width: 2000px;
   margin: 0 auto;
 }
 
-main .point {
+main .chip {
   display: flex;
-  gap: 100px;
-  padding-bottom: 150px;
-  justify-content: space-around;
-  padding-left: 15%;
-  padding-right: 15%;
+  flex: 0;
+  align-items: center;
+  margin: 2px;
+  width: fit-content;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.08);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  border-radius: 16px;
+  margin-left: 8px;
 }
 
-.points > div:last-child {
-  padding-bottom: 0;
+.chip > span {
+  font-size: 13px !important;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+
+  padding-left: 12px;
+  padding-right: 12px;
+  vertical-align: middle;
+  user-select: none;
 }
 
-.point div {
-  flex: 1;
-  text-align: left;
-}
-
-.point h2 {
-  margin-block-start: 0;
-  margin-block-end: 0.75rem;
-}
-
-.point span {
-  font-size: 1.2em;
-}
-
-sup {
-  font-size: small;
+.chip > svg {
+  height: 24px;
+  width: 24px;
+  /** should be 5 and -6 */
+  margin-left: 6px;
+  margin-right: -5px;
 }
 
 .preFooter {
@@ -182,6 +181,17 @@ footer img {
 .img-block img {
   width: 75%;
   height: auto;
+}
+
+.chip-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip-container div {
+  flex: 0;
 }
 
 .download-anki {
@@ -394,24 +404,6 @@ header {
   margin-top: 8px;
 }
 
-/* Point images with special sizing */
-.point-img {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-}
-
-.point-img-on-your-side {
-  margin-top: -25px;
-}
-
-.point-img-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Footer styles */
 .footer-links {
   display: flex;
@@ -464,11 +456,6 @@ span[popovertarget] {
 }
 
 @media (max-width: 600px) {
-  main .point,
-  main .point:nth-of-type(even) {
-    flex-direction: column;
-  }
-
   .cardcard {
     padding: 0px;
   }
@@ -479,19 +466,6 @@ span[popovertarget] {
 
   .grid-container .item.large {
     font-size: larger;
-  }
-
-  main .point {
-    gap: 16px;
-    padding-bottom: 24px;
-    padding-left: 24px;
-    padding-right: 24px;
-    align-items: center;
-  }
-
-  main .point img {
-    max-width: 100%;
-    height: auto;
   }
 
   h1 {
@@ -516,10 +490,6 @@ span[popovertarget] {
   .cardcard {
     flex-direction: column;
     align-items: center;
-  }
-
-  .points {
-    padding-top: 28px;
   }
 
   .beforeTheFold {
@@ -568,11 +538,6 @@ span[popovertarget] {
 }
 
 @media (max-width: 1000px) {
-  main .point {
-    gap: 45px;
-    padding: 0px 50px 100px;
-  }
-
   main .download-container {
     max-width: 500px;
     width: 80%;

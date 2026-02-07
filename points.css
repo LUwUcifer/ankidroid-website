@@ -1,0 +1,83 @@
+main .point:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+main .point {
+  display: flex;
+  gap: 100px;
+  padding-bottom: 150px;
+  justify-content: space-around;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.points > div:last-child {
+  padding-bottom: 0;
+}
+
+.point div {
+  flex: 1;
+  text-align: left;
+}
+
+.point h2 {
+  margin-block-start: 0;
+  margin-block-end: 0.75rem;
+}
+
+.point span {
+  font-size: 1.2em;
+}
+
+sup {
+  font-size: small;
+}
+
+/* Point images with special sizing */
+.point-img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+.point-img-on-your-side {
+  margin-top: -25px;
+}
+
+.point-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  main .point,
+  main .point:nth-of-type(even) {
+    flex-direction: column;
+  }
+
+  main .point {
+    gap: 16px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-items: center;
+  }
+
+  main .point img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .points {
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main .point {
+    gap: 45px;
+    padding: 0px 50px 100px;
+  }
+}
