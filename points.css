@@ -12,7 +12,7 @@ main .point {
 }
 
 .points > div:last-child {
-  padding-bottom: 0;
+  padding-bottom: 5vh;
 }
 
 .point div {
@@ -33,22 +33,22 @@ sup {
   font-size: small;
 }
 
-/* Point images with special sizing */
-.point-img {
+.point-img-container{
   width: 100%;
   height: auto;
-  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.point-img{
+  width: 100%; /*changing this will cause spacing issues between 600-850px view width*/
+  height: auto;
+  max-width: 28rem;
+  object-fit: contain;
 }
 
 .point-img-on-your-side {
-  margin-top: -25px;
-}
-
-.point-img-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 16rem;
 }
 
 @media (max-width: 600px) {
